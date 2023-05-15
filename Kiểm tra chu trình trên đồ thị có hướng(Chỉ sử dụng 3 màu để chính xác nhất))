@@ -85,18 +85,9 @@ void solve() {
 	}
 	memset(color, 0, sizeof(color));
 	FORn(i, 1, V) {
-		if (!color[i]) {
+		if (color[i] == 0) {
 			if (dfs(i)) {
 				cout << "YES\n";
-				/*vector<int> cycle;
-				cycle.pb(st);
-				while (en != st) {
-					cycle.pb(en);
-					en = parent[en];
-				}
-				cycle.pb(st);
-				reverse(cycle.begin(), cycle.end());
-				for (int x : cycle) cout << x << " ";*/
 				return;
 			}
 		}
